@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Entada de valores numéricos</title>
+</head>
+<body>
+	Digite o ano atual:
+	<input type="text" name="ano" id="ano">
+<br/>
+<br/>
+	Digite o ano do seu nascimento:
+	<input type="text" name="nasc" id="nasc">
+<br/>
+<br/>
+	Digite o seu nome:
+  <input type="text" name="nome" id="nome">
+<br/>
+<br/>
+	<p id="mostrarResultados">--</p>
+<br/>
+<br/>
+<button type="button" onclick="soma()">Calcular</button>
+
+<button type="button" onclick="limpar()">Limpar</button>
+</body>
+</html>
+
+
+<script type="text/javascript">
+
+
+	function soma() {
+
+	var nom=  document.getElementById('nome').value;
+  var val1 = parseInt(document.getElementById('ano').value);
+  var val2 = parseInt(document.getElementById('nasc').value);
+  var resultado = 'seu nome é, ' + nom + ' e sua idade é de , ' + (val1 - val2) + ' anos' ;
+
+
+document.getElementById('mostrarResultados').innerHTML = resultado;
+
+	}
+
+function limpar() {
+
+document.getElementById('ano').value ='';
+document.getElementById('nasc').value ='';
+document.getElementById('mostrarResultados').innerHTML ='--';
+
+}
+</script>
